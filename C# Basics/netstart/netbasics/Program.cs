@@ -33,8 +33,20 @@
 // var a=Sphere1.GetArea();
 // Console.WriteLine("Area="+a);
 
- string filePath = @"D:\SDK-and-C-Sharp\C# Basics\netstart\netbasics\People Management\People.csv";
+// using System;
+ // Instantiate the FileIO class
+        FileIO fileIO = new FileIO();
 
- CSVParser csvParser = new CSVParser();
- csvParser.Parse(filePath);
- csvParser.PrintNames();
+        // Create a text file directly in the folderPath
+        fileIO.CreateFile();
+
+        // Create a text file inside a new folder within folderPath
+        fileIO.CreateFileWithinFolder();
+
+        Console.WriteLine("New folder and file created successfully.");
+
+//  string filePath = @"D:\SDK-and-C-Sharp\C# Basics\netstart\netbasics\People Management\People.csv";
+
+//  CSVParser csvParser = new CSVParser();
+//  csvParser.Parse(filePath);
+//  csvParser.PrintNames();
