@@ -29,6 +29,12 @@
 // Console.WriteLine("Area="+a);
 // Console.WriteLine("Perimeter="+p);
 
-var Sphere1= new Sphere(22.55);
-var a=Sphere1.GetArea();
-Console.WriteLine("Area="+a);
+// var Sphere1= new Sphere(22.55);
+// var a=Sphere1.GetArea();
+// Console.WriteLine("Area="+a);
+
+ string filePath = @"D:\SDK-and-C-Sharp\C# Basics\netstart\netbasics\People Management\People.csv";
+
+ CSVParser csvParser = new CSVParser();
+ csvParser.Parse(filePath);
+ csvParser.PrintNames();
