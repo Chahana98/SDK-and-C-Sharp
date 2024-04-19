@@ -22,8 +22,7 @@ class LINQ{
         var odds = ages.Where(x => x% 2 == 1);
 
         // Find cubes of all even numbers
-        var even = ages.Where(x => x % 2 == 0);
-        var cubes = ages.Select(x => x * x);
+        var even=ages.Where(age=>age%2==0).Select(age => age * age * age);
 
     }
 }
