@@ -32,8 +32,9 @@ class LINQ{
         // Find cubes of all even numbers
         var even=ages.Where(age => age % 2 == 0).Select(age => age * age * age);
 
-        // find the student who live in dang in Student collection
-         var dangStudents = students.Where(student => student.Address == "Dang");
+        // find the student who live in dang and sort the results by name in Student collection
+         var dangStudents = students.Where(student => student.Address == "Dang").OrderBy(student => student.Name);
+;
 
     }
 }
