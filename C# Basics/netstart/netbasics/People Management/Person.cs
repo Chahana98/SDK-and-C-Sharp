@@ -1,15 +1,15 @@
 // Person.cs
 public class Person
 {
-    int index;
-    string userId;
-    string firstName;
-    string lastName;
-    Gender sex;
-    string email;
-    string phone;
-    DateTime dob;
-    string jobTitle;
+    public int index;
+    public string userId;
+    public string firstName;
+    public string lastName;
+    public Gender sex;
+    public string email;
+    public string phone;
+    public DateTime dob;
+    public string jobTitle;
 }
 
 public enum Gender{

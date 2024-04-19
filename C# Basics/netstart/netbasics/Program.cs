@@ -35,18 +35,17 @@
 
 // using System;
  // Instantiate the FileIO class
-        FileIO fileIO = new FileIO();
+        // FileIO fileIO = new FileIO();
 
-        // Create a text file directly in the folderPath
-        fileIO.CreateFile();
+        // // Create a text file directly in the folderPath
+        // fileIO.CreateFile();
 
-        // Create a text file inside a new folder within folderPath
-        fileIO.CreateFileWithinFolder();
+        // // Create a text file inside a new folder within folderPath
+        // fileIO.CreateFileWithinFolder();
 
-        Console.WriteLine("New folder and file created successfully.");
+        // Console.WriteLine("New folder and file created successfully.");
 
-//  string filePath = @"D:\SDK-and-C-Sharp\C# Basics\netstart\netbasics\People Management\People.csv";
 
-//  CSVParser csvParser = new CSVParser();
-//  csvParser.Parse(filePath);
-//  csvParser.PrintNames();
+ CSVParserr csvParserr = new CSVParserr();
+ csvParserr.Parse();
+ csvParserr.PrintNames();
