@@ -5,6 +5,14 @@
 class LINQ{
     int[] ages = [22,33,44,55,66,77];
 
+   List<Student> students = [
+        new Student() { name = "Ram", address = "Ktm"},
+        new Student() { name = "Laxman", address = "Dang"},
+        new Student() { name = "Bikendra", address = "Ktm"},
+        new Student() { name = "Sandip", address = "Dang"},
+        new Student() { name = "Chahana", address = "Dhangadhi"},
+    ];
+
     // Find squares of all numbers in age collection
     public void LearnLinq()
     {
@@ -23,6 +31,9 @@ class LINQ{
 
         // Find cubes of all even numbers
         var even=ages.Where(age => age % 2 == 0).Select(age => age * age * age);
+
+        // find the student who live in dang in Student collection
+         var dangStudents = students.Where(student => student.Address == "Dang");
 
     }
 }
