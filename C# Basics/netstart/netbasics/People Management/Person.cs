@@ -1,7 +1,19 @@
 // Person.cs
 public class Person
 {
-    public string Index { get; set; }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
+    public int index { get; set; }
+    public string userId {get; set; }
+    public string firstName { get; set; }
+    public string lastName { get; set; }
+    public Gender sex {get; set; } 
+    public string email {get; set; }
+    public string phone;
+    DateTime dob;
+    string jobTitle;
+}
+
+public enum Gender{
+    Male,
+    Female,
+    Others
 }
