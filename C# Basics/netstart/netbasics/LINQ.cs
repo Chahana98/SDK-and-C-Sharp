@@ -34,7 +34,6 @@ class LINQ{
 
         // find the student who live in dang and sort the results by name in Student collection
          var dangStudents = students.Where(student => student.Address == "Dang").OrderBy(student => student.Name);
-;
 
     }
 }
