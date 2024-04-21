@@ -46,6 +46,13 @@
         // Console.WriteLine("New folder and file created successfully.");
 
 
- CSVParserr csvParserr = new CSVParserr();
- csvParserr.Parse();
- csvParserr.PrintNames();
+//  CSVParserr csvParserr = new CSVParserr();
+//  csvParserr.Parse();
+//  csvParserr.PrintNames();
+
+ParallelAsync parallelAsync = new();
+parallelAsync.ProcessNumbers();
+
+await parallelAsync.IgniteStove();
+await parallelAsync.PutKeatleyOnWithWater();
+await parallelAsync.GrindMasala();
