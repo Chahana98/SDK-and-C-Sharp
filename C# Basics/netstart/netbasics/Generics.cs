@@ -1,21 +1,22 @@
-using namespace Generics.cl
-public class Generics{
-    public void Print(int x){
-        Console.WriteLine(x);
-    }
-     public void Print(float x){
-        Console.WriteLine(x);
-    }
-    // <> this refers to generic method
-     public void Print<T>(T x){
-        Console.WriteLine(x);
-    }
-    public void Print(){
-        Print<string>("hhh");
-        Print<int>(566);
-        Print<decimal>(66.8m);
+using System;
+using System.Collections.Generic;
 
-        List<int> marks = [24,45,60, 30];
+public class Generics
+{
+    public void Print<T>(T x)
+    {
+        Console.WriteLine(x);
+    }
+
+    public void Test()
+    {
+        Print<string>("435234");
+        Print<int>(435234);
+        Print<decimal>(43523.234m);
+        Print<byte>(234);
+
+        List<int> marks= [];
+        // 
         marks.Add(89);
     }
 }
