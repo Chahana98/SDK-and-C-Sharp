@@ -34,21 +34,20 @@
 // Console.WriteLine("Area="+a);
 
 // using System;
- // Instantiate the FileIO class
-        // FileIO fileIO = new FileIO();
+// Instantiate the FileIO class
+// FileIO fileIO = new FileIO();
 
-        // // Create a text file directly in the folderPath
-        // fileIO.CreateFile();
+// // Create a text file directly in the folderPath
+// fileIO.CreateFile();
 
-        // // Create a text file inside a new folder within folderPath
-        // fileIO.CreateFileWithinFolder();
+// // Create a text file inside a new folder within folderPath
+// fileIO.CreateFileWithinFolder();
 
-        // Console.WriteLine("New folder and file created successfully.");
+// Console.WriteLine("New folder and file created successfully.");
 
-
-//  CSVParserr csvParserr = new CSVParserr();
-//  csvParserr.Parse();
-//  csvParserr.PrintNames();
+// CsvParserr parser = new();
+// parser.Parse();
+// parser.PrintNames();
 
 ParallelAsync parallelAsync = new();
 parallelAsync.ProcessNumbers();
