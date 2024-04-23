@@ -12,8 +12,7 @@ class Student
 
     public void PrintDetails()
     {
-        Console.WriteLine($"{n
-        ame} {address} {roll} {dob}");
+        Console.WriteLine($"{name} {address} {roll} {dob}");
     }
 
     public static void PrintStudentType()
