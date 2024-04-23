@@ -49,9 +49,30 @@
 // parser.Parse();
 // parser.PrintNames();
 
-ParallelAsync parallelAsync = new();
-parallelAsync.ProcessNumbers();
+// ParallelAsync parallelAsync = new();
+// parallelAsync.ProcessNumbers();
 
-await parallelAsync.IgniteStove();
-await parallelAsync.PutKeatleyOnWithWater();
-await parallelAsync.GrindMasala();
+// await parallelAsync.IgniteStove();
+// await parallelAsync.PutKeatleyOnWithWater();
+// await parallelAsync.GrindMasala();
+
+BasicsDbContext Db = new();
+var teacher1 = new Teacher{
+    Name="Prajwol",
+    Address="Dang",
+    Gender='M',
+    Qualification="Graduate",
+    Dob= new DateTime(200,10,15)
+};
+Db.Teachers.Add(teacher1);
+Db.SaveChanges();
+
+var teachers = Db.Teachers.ToList();
+
+// List all female teachers from dang
+ var femaleTeachersInDang = Db.Teachers
+            .Where(teacher => teacher.Gender == 'F' && teacher.Address == "Dang").ToList();
+foreach (var teacher in teachers)
+{
+    Console.WriteLine($"Name: {teacher.Name}, Dob: {teacher.Dob}");
+}
