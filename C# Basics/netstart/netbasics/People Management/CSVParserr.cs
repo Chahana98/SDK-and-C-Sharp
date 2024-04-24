@@ -1,10 +1,11 @@
-class CsvParserr
+class CSVParserr
 {
     List<Person> people = [];
-    public void Parse()
+    // public void Parse()
+    public List<Person> Parse()
     {
         // Read file
-        string filePath = @"D:\AppSoft\Training\NETSDKandCSharpLangauge\Assignment1\PeopleManagement\Data\People.csv";
+        string filePath = @"D:\SDK-and-C-Sharp\C# Basics\netstart\netbasics\People Management\People.csv";
         var lines = File.ReadAllLines(filePath);
         
         // Parsing
@@ -26,6 +27,7 @@ class CsvParserr
 
             people.Add(person);
         }
+         return people;
     }
 
     public void PrintNames()

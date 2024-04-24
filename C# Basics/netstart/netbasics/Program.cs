@@ -56,23 +56,34 @@
 // await parallelAsync.PutKeatleyOnWithWater();
 // await parallelAsync.GrindMasala();
 
-BasicsDbContext Db = new();
-var teacher1 = new Teacher{
-    Name="Prajwol",
-    Address="Dang",
-    Gender='M',
-    Qualification="Graduate",
-    Dob= new DateTime(200,10,15)
-};
-Db.Teachers.Add(teacher1);
-Db.SaveChanges();
+// BasicsDbContext Db = new();
+// var teacher1 = new Teacher{
+//     Name="Prajwol",
+//     Address="Dang",
+//     Gender='M',
+//     Qualification="Graduate",
+//     Dob= new DateTime(200,10,15)
+// };
+// Db.Teachers.Add(teacher1);
+// Db.SaveChanges();
 
-var teachers = Db.Teachers.ToList();
+// var teachers = Db.Teachers.ToList();
 
-// List all female teachers from dang
- var femaleTeachersInDang = Db.Teachers
-            .Where(teacher => teacher.Gender == 'F' && teacher.Address == "Dang").ToList();
-foreach (var teacher in teachers)
-{
-    Console.WriteLine($"Name: {teacher.Name}, Dob: {teacher.Dob}");
-}
+// // List all female teachers from dang
+//  var femaleTeachersInDang = Db.Teachers
+//             .Where(teacher => teacher.Gender == 'F' && teacher.Address == "Dang").ToList();
+// foreach (var teacher in teachers)
+// {
+//     Console.WriteLine($"Name: {teacher.Name}, Dob: {teacher.Dob}");
+// }
+
+CSVParserr parser = new CSVParserr();
+List<Person> people = parser.Parse();
+
+// Create instance of PeopleReport
+PeopleReport report = new PeopleReport();
+
+// Generate and save reports
+report.SaveMales(people.ToArray(), "males.csv");
+report.SaveAdultFemales(people.ToArray(), "adultfemales.csv");
+report.SaveDotComUsers(people.ToArray(), "dotcomusers.csv");
